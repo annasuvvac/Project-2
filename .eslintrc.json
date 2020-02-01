@@ -1,26 +1,9 @@
 {
     "env": {
-        "es6": true,
+        "browser": true,
+        "commonjs": true,
         "node": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
     "rules": {
         "no-duplicate-case":"error",
         "no-empty":"error",
@@ -44,19 +27,16 @@
         "brace-style": "error",
         "indent": [
             "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
+            2
         ],
         "quotes": [
             "error",
-            "double"
+            "single"
         ],
         "semi": [
             "error",
             "always"
         ]
     }
-}
+  }
+  
