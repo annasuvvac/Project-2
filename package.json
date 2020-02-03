@@ -16,7 +16,6 @@
     "eslint": "^4.19.1",
     "express-handlebars": "^3.1.0",
     "handlebars": "^4.7.2",
-    "ibm-watson": "^5.3.1",
     "react-app": "^1.1.2",
     "sass": "^1.25.0"
   }
