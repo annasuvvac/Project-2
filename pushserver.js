@@ -3,7 +3,7 @@
 // Series of npm packages that we will use to give our server useful functionality
 // ==============================================================================
 
-var express = require("express");
+var express = require('express');
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -20,8 +20,12 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// Requiring our models for syncing
+var db = require('./models');
+
+
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 // ================================================================================
 // ROUTER
@@ -29,8 +33,8 @@ app.set("view engine", "handlebars");
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require('./routes/apiRoutes')(app);
+require('./routes/htmlRoutes')(app);
 
 // =============================================================================
 // LISTENER
@@ -39,15 +43,14 @@ require("./routes/htmlRoutes")(app);
 
 
 
-app.get("/", function(req, res) {
-    connection.query("SELECT * FROM plans;", function(err, data) {
-      if (err) {
-        return res.status(500).end();
-      }
-  
-      res.render("index", { plans: data });
-    });
+app.get('/', function(req, res) {
+  connection.query('SELECT * FROM plans;', function(err, data) {
+    if (err) {
+      return res.status(500).end();
+    }
+    res.render('index', { plans: data });
   });
+});
 
 
 
@@ -55,8 +58,7 @@ app.get("/", function(req, res) {
 
 
 db.sequelize.sync().then(function() {
-    app.listen(PORT, function() {
-      console.log("App listening on PORT " + PORT);
-    });
+  app.listen(PORT, function() {
+    console.log('App listening on PORT ' + PORT);
   });
-  
+});
