@@ -38,9 +38,18 @@ module.exports = function(app) {
   res.json(hotelData);
 };
 
-app.get('/api/htmlforcarrental', function(req, res) {
-  res.json(carRentalData);
-});
+  app.get("/api/htmlforcarrental", function(req, res) {
+    res.json(carRentalData);
+      // Find one Author with the id in req.params.id and return them to the user with res.json
+      db.Author.findOne({
+        where: {
+          id: req.params.id
+        }
+      }).then(function(dbAuthor) {
+        res.json(dbAuthor);
+      });
+    });
+  });
 
 app.get('/api/htmlforflight', function(req, res) {
   res.json(flightData);
@@ -54,15 +63,28 @@ app.get('/api/htmlforflight', function(req, res) {
 // Then the server saves the data to the tableData array)
 // ---------------------------------------------------------------------------
 
-app.post('/api/htmlforhotel', function(req, res) {
-  // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-  // It will do this by sending out the value "true" have a table
-  // req.body is available since we're using the body parsing middleware
-  if (hotelData.length < 5) {
-    hotelData.push(req.body);
-    res.json(true);
-  } else {
-    waitListData.push(req.body);
-    res.json(false);
-  }
-});
+  app.post("/api/htmlforhotel", function(req, res) {
+    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
+    // It will do this by sending out the value "true" have a table
+    // req.body is available since we're using the body parsing middleware
+    if (hotelData.length < 5) {
+      hotelData.push(req.body);
+      res.json(true);
+    }
+    else {
+      waitListData.push(req.body);
+      res.json(false);
+    }
+  });
+  app.delete("/api/authors/:id", function(req, res) {
+    // Delete the Author with the id available to us in req.params.id
+    db.Author.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbAuthor) {
+      res.json(dbAuthor);
+    });
+  });
+
+};
