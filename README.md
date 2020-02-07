@@ -21,4 +21,4 @@ HTTPS:
 ## License
 
 
-Copyright (c) [2019] [Brittany, Reese, Patrick, Ana]
+Copyright (c) [2019] [Brittany, Reece, Patrick, Ana]
