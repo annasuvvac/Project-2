@@ -28,8 +28,7 @@ app.get('/', (req, res) => {
     "content-type":"application/json",
     "x-rapidapi-host":"hotels4.p.rapidapi.com",
     "x-rapidapi-key":"0678ac7d4dmsh7ec92c295c5eef2p194aa9jsnf39296021020"
-    },
-    "params":{
+    },"params":{
     "locale":"en_US",
     "query":"new york"
     }
@@ -51,3 +50,13 @@ app.listen(PORT, () => {
     console.log('Server is starting at port', PORT);
 
 });
+
+
+
+
+
+
+
+  
+
+          
