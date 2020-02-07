@@ -40,6 +40,15 @@ module.exports = function(app) {
 
   app.get("/api/htmlforcarrental", function(req, res) {
     res.json(carRentalData);
+      // Find one Author with the id in req.params.id and return them to the user with res.json
+      db.Author.findOne({
+        where: {
+          id: req.params.id
+        }
+      }).then(function(dbAuthor) {
+        res.json(dbAuthor);
+      });
+    });
   });
 
   app.get("/api/htmlforflight", function(req, res) {
@@ -67,3 +76,15 @@ module.exports = function(app) {
       res.json(false);
     }
   });
+  app.delete("/api/authors/:id", function(req, res) {
+    // Delete the Author with the id available to us in req.params.id
+    db.Author.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbAuthor) {
+      res.json(dbAuthor);
+    });
+  });
+
+};
