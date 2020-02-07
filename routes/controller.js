@@ -14,28 +14,6 @@ module.exports = function(app) {
 
   // Routes =============================================================
 
-  // app.get('/', (req, res) => {
-  //   axios({
-  //     'method':'GET',
-  //     'url':'https://hotels4.p.rapidapi.com/locations/search?locale=en_US&query=',
-  //     'headers': {
-  //       'content-type':'application/json',
-  //       'x-rapidapi-host':'hotels4.p.rapidapi.com',
-  //       'x-rapidapi-key':'0678ac7d4dmsh7ec92c295c5eef2p194aa9jsnf39296021020'
-  //     },'params':{
-  //       'locale':'en_US',
-  //       'query':'new york'
-  //     }
-  //   })
-  //     .then((response)=>{
-  //       console.log(response.data);
-  //     })
-  //     .catch((error)=>{
-  //       res.render('index');
-  //       console.log(error);
-  //     });
-  // });
-
   app.get('/', function(req, res) {
     // findAll returns all entries for a table when used with no options
     db.Todo.findAll({}).then(function(dbBooking) {
