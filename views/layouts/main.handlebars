@@ -25,7 +25,7 @@
             </a>
             <ul class="right hide-on-med-and-down">
               <li>
-                <a href="#home">Home</a>
+                <a href="index.html">Home</a>
               </li>
               <li>
                 <a href="#search">Search</a>
@@ -33,6 +33,7 @@
               <li>
                 <a href="hotel.html">Hotels</a>
               </li>
+             
              
               <li>
                 <a href="place.html">Popular Places</a>
@@ -47,7 +48,7 @@
     </div>
     <ul class="sidenav" id="mobile-nav">
       <li>
-        <a href="#home">Home</a>
+        <a href="index.html">Home</a>
       </li>
       <li>
         <a href="#search">Search</a>
@@ -55,7 +56,6 @@
       <li>
         <a href="hotel.html">Hotels</a>
       </li>
-     
       <li>
         <a href="place.html">Popular Places</a>
       </li>
@@ -72,21 +72,24 @@
           <!-- random image -->
           <div class="caption center-align">
             <h2>Take Your Dream Vacation</h2>
-            </div>
+            <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, provident eos dicta unde debitis</h5>
+          </div>
         </li>
         <li>
           <img src="img/resort2.jpg">
           <!-- random image -->
           <div class="caption left-align">
             <h2>We Work With All Budgets</h2>
-            </div>
+            <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus delectus inventore neque impedit</h5>
+          </div>
         </li>
         <li>
           <img src="img/resort3.jpg">
           <!-- random image -->
           <div class="caption right-align">
             <h2>Group & Individual Getaways</h2>
-            </div>
+            <h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsum molestias excepturi doloremque</h5>
+          </div>
         </li>
       </ul>
     </section>
@@ -94,30 +97,15 @@
      <!-- Section: Search -->
   
     <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
-         <div class="row ">
-           
-                    <div id='searchContainer' class="col s12" style="padding: 0px;">
-                        <form id="searchCity" class="searchstyle">
-                            <div class="file-field input-field margin">
-                                <div id="searchCityButton" class="btn red lighten-2">
-                                    <div id="searchicon">&#9906</div>
-                                </div>
-                                <div class="file-path-wrapper" style=" background-color: white;">
-                                    <input type="text" id="userInput" class="form-control"
-                                        placeholder="Search For Hotels by City" style="margin:0 auto;">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col s12">
-                            <div id="displayBox"></div>
-
-                        </div>
-                    </div>
-                </div>
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <h3>Search Destinations</h3>
+              <div class="input-field">
+                <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Spain, Dubai, etc..">
+              </div>
             </div>
+          </div>
         </div>
     </section>
   
@@ -126,13 +114,29 @@
         <div class="container">
           <div class="row">
             <div class="col s12 m4">
+              <div class="card-panel">
+                <i class="material-icons large teal-text">
+                  room
+                </i>
+                <h4>Pick your car</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, tempore?</p>
+              </div>
+            </div>
+            <div class="col s12 m4">
             <div class="card-panel">
               <i class="material-icons large teal-text">store</i>
               <h4>Hotels</h4>
-              <p>Find a hotel</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, tempore?</p>
             </div>
           </div>
-          
+          <div class="col s12 m4">
+            <div class="card-panel">
+              <i class="material-icons large teal-text">airplanemode_active</i>
+              <h4>Fly Cheap</h4>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, tempore?</p>
+            </div>
+          </div>
+         </div>
       </section>
   
       <!-- Section: Popular Places -->
@@ -239,12 +243,7 @@
             <div class="card-panel teal white-text center">
               <i class="material-icons">email</i>
               <h5>Contact Us For Booking</h5>
-              <input type="text" id="name" placeholder="Your Name"><br>
-              <label for="email">Email</label><br>
-              <input type="email" id="email" placeholder="example@yahoo.com"><br>
-              <label for="message">Message</label><br>
-              <textarea id="message" id="myTextArea" cols="30" rows="10"></textarea><br>
-              <input id="submitButton" type="submit" value="Submit">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quidem vero expedita hic autem eos neque, repellendus perspiciatis quas eum?</p>
             </div>
             <ul class="collection with-header">
               <li class="collection-header">
@@ -338,8 +337,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="materialize/js/materialize.js"></script>
   <script src="materialize/js/init.js"></script>
-  <script src="js/search.js"></script>
-  <script src="/server.js"></script>
+  <script src="server.js"></script>
       </body>
     </html>
           
