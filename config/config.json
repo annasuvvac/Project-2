@@ -3,7 +3,7 @@
     "development":{
     "username":"root",
     "password":null,
-    "database":"Havent Created",
+    "database":"Booking_DB",
     "Host":"127.0.0.1",
     "port":3306,
     "dialect":"mysql"

@@ -15,11 +15,22 @@ module.exports = function(app) {
   // Routes =============================================================
 
   app.get('/', function(req, res) {
+    console.log("it works!")
     // findAll returns all entries for a table when used with no options
-    db.Todo.findAll({}).then(function(dbBooking) {
+    db.Booking.findAll({}).then(function(dbBooking) {
       // We have access to the todos as an argument inside of the callback function
       res.render('index', dbBooking);
     });
+  });
+
+  app.post('/api/save', function(req, res) {
+    db.Booking.create({
+      city: req.body,
+      hotelname: "Holiday Inn"
+    }).then(function(complete) {
+      console.log(complete);
+    });
+
   });
 
   app.post('/api/htmlforhotel', function(req, res) {
@@ -38,9 +49,10 @@ module.exports = function(app) {
 
       }
 
-    }).then(function(dbBooking)
+    }).then(function(dbBooking) {
     // do something, get instanceof, store it in placeholder,
     res.render('hotel', placeholder);
+    });
   });
 
 };

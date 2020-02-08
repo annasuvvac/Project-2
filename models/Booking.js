@@ -1,4 +1,4 @@
-Module.exports=function(sequelize,DataTypes){
+module.exports=function(sequelize,DataTypes){
   var Booking=sequelize.define('Booking',{
     City:{
       type:DataTypes.STRING,

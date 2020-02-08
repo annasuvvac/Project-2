@@ -1,3 +1,5 @@
+var userInput;
+
 /* eslint-disable indent */
 function searchCity(userInput) {
     var queryUrl = 'https://hotels4.p.rapidapi.com/locations/search?query=' + userInput;
@@ -30,11 +32,12 @@ function searchCity(userInput) {
             var name = $('<h4>').addClass('Name').text(resultArray[i].name);
 
             var caption = $('<p>').addClass('captions').html(resultArray[i].caption);
-
+            var saveBtn = $('<p>').html('<button class="savebtn">Save</button>');
 
             box.append(icon);
             box.append(name);
             box.append(caption);
+            box.append(saveBtn);
             outerBox.append(box);
 
             $('#hotel-results').append(outerBox);
@@ -44,6 +47,15 @@ function searchCity(userInput) {
         }
     });
 };
+
+
+$(document).on('click', '.savebtn', function(e) {
+    console.log("click!")
+    $.post("/api/save", userInput)
+    .then(function (response) {
+        console.log('Successfully posted to db')
+    });
+});
 
 $('#searchCityButton').on('click', function (event) {
 
