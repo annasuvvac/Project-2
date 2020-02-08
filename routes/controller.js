@@ -33,6 +33,12 @@ module.exports = function(app) {
   });
 
   app.get('/htmlforhotel',function(req,res){
+    db.Todo.findAll({
+      where: { 
+
+      }
+
+    }).then(function(dbBooking)
     // do something, get instanceof, store it in placeholder,
     res.render('hotel', placeholder);
   });
