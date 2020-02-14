@@ -24,9 +24,10 @@ module.exports = function(app) {
   });
 
   app.post('/api/save', function(req, res) {
+    console.log(req.body);
     db.Booking.create({
-      city: req.body,
-      hotelname: "Holiday Inn"
+      City: req.body.city,
+      HotelName: req.body.hotel
     }).then(function(complete) {
       console.log(complete);
     });
