@@ -2,7 +2,7 @@
 
     "development":{
     "username":"root",
-    "password":null,
+    "password":"eumamgreshit5",
     "database":"Booking_DB",
     "Host":"127.0.0.1",
     "port":3306,
