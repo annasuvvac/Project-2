@@ -9,7 +9,7 @@ npm install
 Note: the serve task won't automatically launch the browser for you. To view the app please open a new tab and go to http://localhost:8080/.
 
 HTTPS:
-https://asproject2.herokuapp.com/index.html
+https://asproject2.herokuapp.com
 
 ## Built With
 
