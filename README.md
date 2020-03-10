@@ -19,4 +19,4 @@ Technologies used: Materialize, Hotels.com API, Node.js
 ## License
 
 
-Copyright (c) [2019] [Brittany, Reece, Patrick, Ana]
+Copyright (c) [2019] [Ana S, Brittany, Reece, Patrick,]
