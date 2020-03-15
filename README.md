@@ -3,8 +3,22 @@
 # Description 
 In this app we created an easy stop for people to book hotels through.
 # Screenshots 
-
+Home Page
+<br>
 <img src="public/img/screen1.png">
+<br>
+<br>
+<br>
+ Search Page
+ <br>
+ <img src="public/img/screen2.png">
+ <br>
+ <br>
+ <br>
+ Picture Gallery
+ <br>
+ <img src="public/img/screen3.png">
+ <br>
 ## Installation 
 npm install 
 
