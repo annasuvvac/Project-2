@@ -2,7 +2,9 @@
 #Take you dream vacation 
 # Description 
 In this app we created an easy stop for people to book hotels through.
+# Screenshots 
 
+<img src="public/img/screen1.png">
 ## Installation 
 npm install 
 
